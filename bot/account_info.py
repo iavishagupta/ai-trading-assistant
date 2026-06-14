@@ -28,18 +28,18 @@ Always respond with the actual data. in this format:
 **Available Balance:** X USDT
 
 **Open Positions:**
-- Symbol:
-- Side:
-- Size:
-- Unrealized PnL: (or 'None' if empty)
+- **Symbol:**
+- **Side:**
+- **Size:**
+- **Unrealized PnL:** (or 'None' if empty)
 
 **Open Orders:**
-- Order ID:
-- Symbol:
-- Type:
-- Side:
-- Price:
-- Quantity: (or 'None' if empty)
+- **Order ID:**
+- **Symbol:**
+- **Type:**
+- **Side:**
+- **Price:**
+- **Quantity:** (or 'None' if empty)
 
 Rules:
 - If user asks for balance only → show only balance fields

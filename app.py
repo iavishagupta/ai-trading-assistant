@@ -23,16 +23,18 @@ from bot.market_analyst import get_market_analysis
 from styles import STYLES
 
 # ── Page config ────────────────────────────────────────────────────────────────
-st.set_page_config(page_title="F-AI", page_icon="🤖", layout="centered")
-st.title("FuturesAI", )
-st.caption("Portfolio project leveraging Binance Futures Testnet for AI-assisted trading.")
-
-# 1. Initialize sidebar state in Session State (Must be at the top)
 if "sidebar_state" not in st.session_state:
     st.session_state.sidebar_state = "expanded"
 
-# 2. Pass the dynamic state to page config (Must be the first Streamlit command)
-st.set_page_config(initial_sidebar_state=st.session_state.sidebar_state)
+st.set_page_config(
+    page_title="F-AI",
+    page_icon="🤖",
+    layout="centered",
+    initial_sidebar_state=st.session_state.sidebar_state
+)
+
+st.title("FuturesAI")
+st.caption("Portfolio project leveraging Binance Futures Testnet for AI-assisted trading.")
 
 with st.sidebar:
     st.header("🔑 API Configuration")
