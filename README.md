@@ -214,7 +214,6 @@ FuturesAI/
 │
 ├── app.py                      ← Streamlit chat UI — main entry point
 ├── styles.py                   ← All CSS (dark theme, animations, fonts)
-├── cli.py                      ← Original CLI interface (still works)
 ├── requirements.txt
 ├── .env.example
 │
