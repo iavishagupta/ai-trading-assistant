@@ -84,10 +84,8 @@ if "pending_order" not in st.session_state:
 # ── Helpers ────────────────────────────────────────────────────────────────────
 def get_client() -> BinanceClient:
     return BinanceClient(
-        # api_key=st.session_state.binance_api_key or os.getenv("BINANCE_API_KEY"),
-        # api_secret=st.session_state.binance_api_secret or os.getenv("BINANCE_API_SECRET")
-        api_key=os.getenv("BINANCE_API_KEY"),
-        api_secret=os.getenv("BINANCE_API_SECRET")
+        api_key=st.session_state.binance_api_key,
+        api_secret=st.session_state.binance_api_secret
     )
 
 def add_message(role: str, content: str):
