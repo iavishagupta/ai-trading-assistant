@@ -1,0 +1,23 @@
+# Environment / secrets — NEVER upload these
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Logs (optional — you may want to keep sample logs)
+# logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
