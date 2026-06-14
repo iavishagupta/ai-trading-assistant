@@ -148,6 +148,7 @@ div[class="st-emotion-cache-hzygls eqt0gmo3"] {
 
 .st-emotion-cache-hzygls {
     position: fixed;
+    height: 100px;
 }
 
 /* CHAT INPUT WRAPPER */
