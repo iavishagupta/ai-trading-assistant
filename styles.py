@@ -199,10 +199,16 @@ button[data-testid="stChatInputSubmitButton"] {
     font-weight: 700 !important;
     box-shadow: 0 0 15px #F0B90B44 !important;
     transition: box-shadow 0.2s ease !important;
+    position: relative;
+    align-self: center;
 }
 
 button[data-testid="stChatInputSubmitButton"]:hover {
     box-shadow: 0 0 25px #F0B90B88 !important;
+}
+
+.st-emotion-cache-vlkg2l {
+    padding-right: 15px;
 }
 
 /* CONFIRM / CANCEL BUTTONS */

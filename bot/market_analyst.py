@@ -31,7 +31,13 @@ Important rules:
 - Always refer to the specific coin being asked about
 - If it's a follow-up question like 'what about SOL' or 'how will this affect me',
   answer in context of the previous conversation
-- Be concise and always remind this is not financial advice"""),
+- Be concise and always remind this is not financial advice
+     
+Important formatting rules:
+- Never use $ dollar signs before prices — write 71.45 not $71.45
+- Never use * for emphasis in your response
+- Write plain text only, no markdown formatting
+- Keep all numbers as plain digits"""),
     ("human", """Symbol: {symbol}
 Market Data:
 {market_data}
