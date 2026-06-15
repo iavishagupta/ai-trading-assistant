@@ -91,14 +91,21 @@ def _fetch_serper_news(symbol: str) -> str:
         return "Could not fetch news."
 
 
+import concurrent.futures
+
 def get_market_analysis(symbol: str, user_question: str, account_context: str = "") -> str:
     symbol = symbol.upper()
     if "USDT" not in symbol:
         symbol += "USDT"
 
-    ticker = _fetch_binance_ticker(symbol)
-    klines = _fetch_binance_klines(symbol)
-    news   = _fetch_serper_news(symbol)
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        ticker_future  = executor.submit(_fetch_binance_ticker, symbol)
+        klines_future  = executor.submit(_fetch_binance_klines, symbol)
+        news_future    = executor.submit(_fetch_serper_news, symbol)
+
+        ticker = ticker_future.result()
+        klines = klines_future.result()
+        news   = news_future.result()
 
     recent_closes = [k[4] for k in klines[-6:]] if klines else []
 

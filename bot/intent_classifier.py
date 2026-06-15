@@ -34,7 +34,7 @@ def classify_intent(message: str, history: list = []) -> str:
     chain = PROMPT | llm
     result = chain.invoke({
         "message": message,
-        "history": history[-6:]  
+        "history": history[-4:]  
     })
     intent = result.content.strip().upper()
     return intent if intent in INTENTS else "GENERAL"

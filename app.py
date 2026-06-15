@@ -216,7 +216,8 @@ if user_input := st.chat_input("Ask me anything about trading..."):
             llm = ChatOpenAI(
                 model="gpt-4o-mini",
                 temperature=0.4,
-                api_key=os.environ.get("OPENAI_API_KEY")
+                api_key=os.environ.get("OPENAI_API_KEY"),
+                streaming=True,
             )
             result = llm.invoke(
                 f"""You are a focused AI trading assistant for Binance Futures Testnet.
