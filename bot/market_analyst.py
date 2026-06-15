@@ -35,7 +35,6 @@ Important rules:
      
 Important formatting rules:
 - Never use $ dollar signs before prices — write 71.45 not $71.45
-- Never use * for emphasis in your response
 - Write plain text only, no markdown formatting
 - Keep all numbers as plain digits"""),
     ("human", """Symbol: {symbol}
